@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prajwal Gautam | Messages</title>
+    <!-- Reusing main styles for colors/fonts -->
+    <link rel="stylesheet" href="../style.css">
+    <!-- Dashboard specific styles -->
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="messages.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+
+    <div class="dashboard-container">
+        <!-- Sidebar Component Placeholder (display: contents ensures flexbox layout isn't broken) -->
+        <div id="sidebar-placeholder" style="display: contents;"></div>
+
+        <!-- Main Content -->
+        <main class="dashboard-content">
+            <header class="content-header">
+                <div class="header-left">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="message-search-input" placeholder="Search messages...">
+                    </div>
+                </div>
+                <div class="user-profile">
+                    <img src="/images/aa.jpeg" alt="Admin" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80'">
+                    <span>Prajwal Gautam</span>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <h1>Contact Messages</h1>
+                
+                <div class="admin-card mt-4">
+                    <h2>Inbox</h2>
+                    <div class="table-responsive">
+                        <table class="projects-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Message</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admin-messages-list">
+                                <!-- Messages will be injected here via JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Sidebar Component Logic -->
+    <script src="components/sidebar.js"></script>
+    
+    <!-- Messages Logic -->
+    <script src="messages.js"></script>
+</body>
+</html>

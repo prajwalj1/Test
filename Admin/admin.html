@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Admin • Portfolio</title>
+  <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="admin-root">
+  <main class="login-wrap">
+    <section class="panel left-panel">
+      <div class="brand">
+        <a id="logo-link" class="logo" href="#" title="Go to dashboard">
+          <img class="logo-image" src="/images/SSSS.jpeg" alt="Portfolio Admin logo">
+        </a>
+        <div class="brand-text">
+          <h1>Portfolio Admin</h1>
+          <p class="muted">Secure area — authorized access only</p>
+        </div>
+      </div>
+
+      <div class="auth-tabs">
+        <button id="tab-login" class="tab active">Login</button>
+        <button id="tab-register" class="tab">Register</button>
+      </div>
+
+      <form id="login-form" class="login-card" aria-labelledby="login-title" novalidate>
+        <h2 id="login-title">Sign in to your account</h2>
+        <p class="muted small">Already registered? Enter your username and password to continue.</p>
+
+        <label class="input-group">
+          <span class="icon"><i class="fa fa-user"></i></span>
+          <input id="adm-username" name="username" type="text" placeholder="Username" required autocomplete="username">
+        </label>
+
+        <label class="input-group">
+          <span class="icon"><i class="fa fa-lock"></i></span>
+          <input id="adm-password" name="password" type="password" placeholder="Password" required autocomplete="current-password">
+          <button type="button" id="toggle-pass" class="toggle-pass" aria-label="Show password"><i class="fa fa-eye"></i></button>
+        </label>
+
+        <div class="form-foot">
+          <label class="remember"><input id="remember" type="checkbox"> Remember me</label>
+          <button id="forgot-password" type="button" class="forgot muted">Forgot password?</button>
+        </div>
+
+        <div class="actions">
+          <button id="adm-login" class="btn btn-primary" type="submit"><i class="fa fa-sign-in-alt"></i> Sign In</button>
+        </div>
+
+        <p id="login-error" class="error" role="alert" aria-live="assertive" style="display:none">Invalid username or password</p>
+      </form>
+
+      <form id="register-form" class="login-card" aria-labelledby="register-title" novalidate style="display:none">
+        <h2 id="register-title">Create a New Account</h2>
+        <p class="muted small">Register a new admin account. This will save credentials locally in your browser.</p>
+
+        <label class="input-group">
+          <span class="icon"><i class="fa fa-user-plus"></i></span>
+          <input id="reg-username" name="username" type="text" placeholder="Choose a username" required>
+        </label>
+
+        <label class="input-group">
+          <span class="icon"><i class="fa fa-briefcase"></i></span>
+          <input id="reg-profession" name="profession" type="text" placeholder="Profession (optional)">
+        </label>
+
+        <label class="input-group">
+          <span class="icon"><i class="fa fa-lock"></i></span>
+          <input id="reg-password" name="password" type="password" placeholder="Choose a password" required>
+        </label>
+
+        <div class="form-foot">
+          <button id="show-login" type="button" class="forgot muted">Already have an account?</button>
+        </div>
+
+        <div class="actions">
+          <button id="adm-register" class="btn btn-primary" type="submit"><i class="fa fa-user-plus"></i> Register</button>
+        </div>
+
+        <p id="register-error" class="error" role="alert" aria-live="assertive" style="display:none">Failed to register. Username may already exist.</p>
+        <p id="register-success" class="success" role="status" aria-live="polite" style="display:none">Registration complete. You will be redirected shortly.</p>
+      </form>
+
+      <form id="reset-form" class="login-card" aria-labelledby="reset-title" novalidate style="display:none">
+        <h2 id="reset-title">Reset password</h2>
+        <p class="muted small">Enter your username and new password to reset your account.</p>
+
+        <label class="input-group">
+          <span class="icon"><i class="fa fa-user"></i></span>
+          <input id="reset-username" name="username" type="text" placeholder="Registered username" required>
+        </label>
+
+        <label class="input-group">
+          <span class="icon"><i class="fa fa-key"></i></span>
+          <input id="reset-password" name="password" type="password" placeholder="New password" required>
+        </label>
+
+        <div class="form-foot">
+          <button id="reset-cancel" type="button" class="forgot muted">Back to login</button>
+        </div>
+
+        <div class="actions">
+          <button id="adm-reset" class="btn btn-primary" type="submit"><i class="fa fa-redo"></i> Reset Password</button>
+        </div>
+
+        <p id="reset-error" class="error" role="alert" aria-live="assertive" style="display:none">Unable to reset password. Username not found.</p>
+        <p id="reset-success" class="success" role="status" aria-live="polite" style="display:none">Password reset successful. Please login again.</p>
+      </form>
+    </section>
+
+    <aside class="panel right-panel">
+      <div class="welcome-card">
+        <h3>Welcome back</h3>
+        <p class="muted">Manage projects, edit content, and keep your portfolio up to date. This admin is a demo — actions persist locally in your browser.</p>
+        <ul class="features">
+          <li><i class="fa fa-check-circle"></i> Secure demo login</li>
+          <li><i class="fa fa-check-circle"></i> Responsive & accessible</li>
+          <li><i class="fa fa-check-circle"></i> Local management (no backend)</li>
+        </ul>
+      </div>
+      <div class="illustration" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1564866657316-1b6d3d6d2d5c?auto=format&fit=crop&w=800&q=60" alt="Admin illustration">
+      </div>
+    </aside>
+
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

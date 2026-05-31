@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prajwal Gautam | Dashboard</title>
+    <!-- Reusing main styles for colors/fonts -->
+    <link rel="stylesheet" href="../style.css">
+    <!-- Dashboard specific styles -->
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+
+    <div class="dashboard-container">
+        <!-- Sidebar Component Placeholder (display: contents ensures flexbox layout isn't broken) -->
+        <div id="sidebar-placeholder" style="display: contents;"></div>
+
+        <!-- Main Content (Right Side) -->
+        <main class="dashboard-content">
+            <header class="content-header">
+                <div class="header-left">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                </div>
+                <div class="user-profile">
+                    <img src="/images/aa.jpeg" alt="Admin" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80'">
+                    <span>Prajwal Gautam</span>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <h1>Dashboard Overview</h1>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-eye"></i></div>
+                        <div class="stat-info">
+                            <h3>Total Views</h3>
+                            <p id="stat-views">1,245</p>
+                        </div>
+                    </div>
+                    <div class="stat-card" style="--icon-color: var(--secondary); background-color: var(--bg-card);">
+                        <div class="stat-icon" style="background: rgba(236, 72, 153, 0.1); color: var(--secondary);"><i class="fas fa-envelope"></i></div>
+                        <div class="stat-info">
+                            <h3>Messages</h3>
+                            <p id="stat-messages">0</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: rgba(16, 185, 129, 0.1); color: var(--accent);"><i class="fas fa-briefcase"></i></div>
+                        <div class="stat-info">
+                            <h3>Projects</h3>
+                            <p id="stat-projects">0</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <h2>Recent Activity</h2>
+                    <div class="activity-list" id="recent-activity-list">
+                        <!-- Activity items will be injected here via JS -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Sidebar Component Logic -->
+    <script src="components/sidebar.js"></script>
+    
+    <!-- Dashboard Overview Logic -->
+    <script src="dashboard.js"></script>
+</body>
+</html>
