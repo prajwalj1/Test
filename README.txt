@@ -13,12 +13,19 @@ Note: The dynamic functionality (saving projects, receiving messages) relies on 
 ========================================
 DUMMY LOGIN DETAILS
 ========================================
-The login system is currently a frontend prototype. If you implement a login gateway in the future, you can use these dummy credentials:
+The login system is currently a frontend prototype. 
 
-Username / Email: CAN BE CREATE FORM FORM
-Password:         CAN BE CREATE FORM FORM
+Username / Email: (Can be created directly from the login form)
+Password:         (Can be created directly from the login form)
 
-(Currently, you can access the admin panel directly by opening the HTML files inside the Admin folder).
+Because there is no backend server, any username and password you enter in the admin login page will generate an active session and let you in.
+
+========================================
+DYNAMIC DATA & LOCAL STORAGE
+========================================
+- Projects: The public portfolio page dynamically fetches all projects from the Admin Dashboard using your browser's "localStorage". 
+  **Note:** If you have not created any projects in the Admin Dashboard yet (or if your localStorage is empty), the portfolio will automatically load 3 dummy placeholder projects so the design doesn't look empty. 
+- Contact Form: Messages sent from the public site instantly appear in the Admin Messages Inbox.
 
 ========================================
 FEATURES
