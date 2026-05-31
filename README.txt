@@ -6,7 +6,7 @@ HOW TO RUN THE PROJECT
 1. Extract or download the project folder.
 2. No local server or backend is required! 
 3. To view the public portfolio, simply double-click "index.html" to open it in any modern web browser (Chrome, Firefox, Edge, etc.).
-4. To view the Admin Dashboard, navigate to the "Admin" folder and double-click "dashboard.html".
+4. To view the Admin Dashboard, navigate to the "admin/admin.html" folder and double-click "dashboard.html".
 
 Note: The dynamic functionality (saving projects, receiving messages) relies on the browser's "localStorage". This means everything works perfectly offline, but data is saved only in your current browser.
 
